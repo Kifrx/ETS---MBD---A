@@ -278,6 +278,15 @@ CREATE TABLE penerimaan_zonasi (
     CONSTRAINT fk_pen_zonasi_verif FOREIGN KEY (verification_id) REFERENCES verification_zonasi(id)
 );
 
+CREATE TABLE audit_verifikasi_ppdb (
+    id              NUMBER PRIMARY KEY,
+    verification_id NUMBER NOT NULL,
+    old_action      VARCHAR2(50),
+    new_action      VARCHAR2(50),
+    operator_id     NUMBER,
+    log_date        TIMESTAMP DEFAULT SYSTIMESTAMP
+);
+
 
 
 CREATE INDEX idx_users_school_dest      ON users(school_destination_id);
