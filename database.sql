@@ -1,4 +1,4 @@
-# SQL: ORACLE
+-- SQL: ORACLE
 
 
 -- DDL Sistem PPDB 
